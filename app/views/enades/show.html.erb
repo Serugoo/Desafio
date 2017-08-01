@@ -1,0 +1,10 @@
+<%= render 'template/menu' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @enade.year %>
+</p>
+
+<%= link_to 'Edit', edit_enade_path(@enade) %> |
+<%= link_to 'Back', enades_path %>

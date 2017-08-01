@@ -1,0 +1,15 @@
+<%= render 'template/menu' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @student.name %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @student.course.name %>
+</p>
+
+<%= link_to 'Edit', edit_student_path(@student) %> |
+<%= link_to 'Back', students_path %>

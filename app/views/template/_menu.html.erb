@@ -1,0 +1,36 @@
+
+<div class="row">
+  <div class="column column-4"></div>
+  <div>
+  <div class="column">    
+    <ul class="tabs">
+      <li>
+      <label>Desempenho</label>
+        <ul class='dropdown'>
+          <li><%= link_to "Listagem de desempenho", performance_index_path %></li>
+        </ul>
+      </li>
+
+      <li>
+        <label>Cadastros</label>
+        <ul class='dropdown'>
+          <li><%= link_to "Edições do Enade", enades_path %></li>
+          <li><%= link_to "Instituições", institutions_path %></li>
+          <li><%= link_to "Cursos", courses_path %></li>
+          <li><%= link_to "Estudantes", students_path %></li>
+        </ul>
+      </li>
+
+
+      <li>
+        <label>Cadastros de Notas</label>
+        <ul class='dropdown'>
+          <li><%= link_to "Notas Gerais", score_generals_path %></li>
+          <li><%= link_to "Notas por curso", score_courses_path %></li>
+          <li><%= link_to "Notas por aluno", score_students_path %></li>
+        </ul>
+      </li>
+    </ul>
+    </div>
+   </div>
+</div>

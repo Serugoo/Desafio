@@ -1,0 +1,2 @@
+module ScoreCoursesHelper
+end

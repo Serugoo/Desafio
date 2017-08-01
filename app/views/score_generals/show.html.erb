@@ -1,0 +1,20 @@
+<%= render 'template/menu' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Enade:</strong>
+  <%= @score_general.enade.year %>
+</p>
+
+<p>
+  <strong>Instituição:</strong>
+  <%= @score_general.institution.name %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @score_general.score %>
+</p>
+
+<%= link_to 'Edit', edit_score_general_path(@score_general) %> |
+<%= link_to 'Back', score_generals_path %>

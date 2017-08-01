@@ -1,0 +1,27 @@
+<%= render 'template/menu' %>
+<h1>Lista de edições do ENADE</h1>
+
+<div class="table">
+  <div class="rowHeader">
+    <div class="row">
+      <div class="column column-2"></div>
+      <div class="column column-2">Ano</div>
+      <th colspan="3"></th>
+    </div>
+  </div>
+
+  <tbody>
+    <% @enades.each do |enade| %>
+      <div class="row">
+        <div class="column column-2"></div>
+         <div class="column column-2"><%= enade.year %></div>
+         <div class="column column-2"><%= link_to 'Edit', edit_enade_path(enade) %></div>
+         <div class="column column-2"><%= link_to 'Destroy', enade, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    <% end %>
+  </tbody>
+</div>
+
+<br>
+
+<%= link_to 'Novo', new_enade_path %>

@@ -1,0 +1,31 @@
+<%= render 'template/menu' %>
+<h1>Lista de notas dos estudantes</h1>
+
+<div class="table">
+  <div class="rowHeader">
+    <div class="row">
+      <div class="column column-2"></div>
+      <div class="column column-2">Enade</div>
+      <div class="column column-2">Estudante</div>
+      <div class="column column-2">Nota</div>
+      <th colspan="3"></th>
+    </div>
+  </div>
+
+  <tbody>
+    <% @score_students.each do |score_student| %>
+      <div class="row">
+        <div class="column column-2"></div>
+        <div class="column column-2"><%= score_student.enade.year %></div>
+        <div class="column column-2"><%= score_student.student.name %></div>
+        <div class="column column-2"><%= score_student.score %></div>
+        <div class="column column-1"><%= link_to 'Edit', edit_score_student_path(score_student) %></div>
+        <div class="column column-1"><%= link_to 'Destroy', score_student, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      </div>
+    <% end %>
+  </tbody>
+</div>
+
+<br>
+
+<%= link_to 'Novo', new_score_student_path %>

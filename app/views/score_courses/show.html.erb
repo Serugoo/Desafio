@@ -1,0 +1,20 @@
+<%= render 'template/menu' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Enade:</strong>
+  <%= @score_course.enade.year %>
+</p>
+
+<p>
+  <strong>Curso:</strong>
+  <%= @score_course.course.name %>
+</p>
+
+<p>
+  <strong>Score:</strong>
+  <%= @score_course.score %>
+</p>
+
+<%= link_to 'Edit', edit_score_course_path(@score_course) %> |
+<%= link_to 'Back', score_courses_path %>

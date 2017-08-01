@@ -1,0 +1,181 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.tabs ul {
+    overflow: hidden;
+    padding-left: 0;
+    zoom: 1;
+}
+
+.nav li {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin-right: 0.5em;
+    padding: 0;
+}
+
+.tabs a {
+    /*background-color: #dddddd;*/
+    color: grey;
+    display: block;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: sans-serif;
+    /*background-color: #ffffff;*/
+}
+
+.tabs a:active, .tabs a:visited {
+    color: grey;
+}
+
+.tabs a:focus, .tabs a:hover {
+    background-color: #599bb3;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.no-borderradius .tabs a:focus, .no-borderradius .tabs a:hover {
+    background-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+}
+
+.tabs a.home, .tabs a.list, .tabs a.create {
+    background-position: 0.7em center;
+    background-repeat: no-repeat;
+    text-indent: 20px;
+}
+
+
+/*NOVO*/
+ul.tabs
+{
+    display: table;
+    margin: 10;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    /*background-color: #ffffff;*/
+}
+ul.tabs li
+{
+    margin: 5;
+    padding: 5;
+    list-style: none;
+    display: table-cell;
+    float: left;
+    position: relative;
+
+    -moz-box-shadow: 0 0 3px 1px #aaaaaa;
+    -webkit-box-shadow: 0 0 3px 1px #aaaaaa;
+    color: black;
+    display: block;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: sans-serif;
+    background-color: #ffffff;
+}
+ul.tabs a
+{
+    position: relative;
+    display: block;
+}
+/* dropdowns
+*************************/
+ul.dropdown
+{
+    margin: 5;
+    padding: 0;
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    width: 250px;
+    display: none;
+    left: 0;
+}
+ul.dropdown ul.dropdown
+{
+    top: 0;
+    left: 95%;
+}
+ul.dropdown li
+{
+    margin: 0;
+    padding: 0;
+    float: none;
+    position: relative;
+    list-style: none;
+    display: block;
+}
+ul.dropdown li a
+{
+    display: block;
+}
+
+.WhiteButton {
+
+    -moz-box-shadow: 3px 4px 0px 0px #899599;
+    -webkit-box-shadow: 3px 4px 0px 0px #899599;
+    box-shadow: 3px 4px 0px 0px #899599;
+
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+    background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+    background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+
+    background-color:#ededed;
+
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+
+    border:1px solid #d6bcd6;
+
+    display:inline-block;
+    color:#3b5999;
+    font-family:arial;
+    font-size:12px;
+    font-weight:bold;
+    padding:5px 24px;
+    text-decoration:none;
+
+    text-shadow:0px 1px 0px #e1e2ed;
+
+}
+.WhiteButton:hover {
+
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+    background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+    background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+    background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+    background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+    background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+
+    background-color:#bab1ba;
+}
+.WhiteButton:active {
+    position:relative;
+    top:1px;
+}

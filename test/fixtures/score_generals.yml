@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  enade_id: 
+  institution_id: 
+  score: 9.99
+
+two:
+  enade_id: 
+  institution_id: 
+  score: 9.99

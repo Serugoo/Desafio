@@ -1,0 +1,51 @@
+
+<%= render 'template/menu' %>
+<%= form_tag performance_index_path, :method => 'get', :id => "performance_search" do %>
+<h1>Desempenho no ENADE</h1>
+
+<div class="table">
+
+    <div class="row rowHeader">
+      <div class="column column-1"></div>
+      <div class="column column-2">Instituição</div>
+      <div class="column column-2">Nota Geral</div>
+      <div class="column column-2">Curso</div>
+      <div class="column column-2">Nota do Curso</div>
+      <div class="column column-2">Média dos alunos do curso</div>
+      <th colspan="3"></th>
+    </div>
+  
+    <div class="row rowHeader">
+      <div class="column column-1"></div>
+      <div class="column column-2"><%= text_field_tag :inst, params[:inst] %></div>
+      <div class="column column-2"><%= text_field_tag :gen, params[:gen] %></div>
+      <div class="column column-2"><%= text_field_tag :cour, params[:cour] %></div>
+      <div class="column column-2"><%= text_field_tag :score_course, params[:score_course] %></div>
+      <div class="column column-2"><%= submit_tag "Filtrar", :name => nil%></div>
+      <th colspan="3"></th>
+    </div>
+
+    <% @GeneralScoreList.each do |score_general|  %>
+          <div class="row">
+            <div class="column column-1"></div>
+            <div class="column column-2"><%= score_general.institution.name %></div>
+            <div class="column column-2"><%= score_general.score %></div>
+            <div class="column column-2"></div>
+            <div class="column column-2"></div>
+            <div class="column column-2"></div>
+          </div>
+        <% @CourseScoreList.each do |score_course| %>
+          <% if score_course.course.institution.id == score_general.institution.id %>
+              <div class="row">
+                <div class="column column-1"></div>
+                 <div class="column column-2"></div>
+                 <div class="column column-2"></div>
+                 <div class="column column-2"><%= score_course.course.name %></div>
+                 <div class="column column-2"><%= score_course.score %></div>
+                 <div class="column column-2"><%= score_course.course.average %></div>
+              </div>
+          <% end %>
+        <% end %>
+    <% end %>
+</div>
+<% end %>

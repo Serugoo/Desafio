@@ -1,0 +1,29 @@
+<%= form_for(@score_course) do |f| %>
+  <% if @score_course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@score_course.errors.count, "error") %> prohibited this score_course from being saved:</h2>
+
+      <ul>
+      <% @score_course.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :enade_id %><br>
+    <%= collection_select(:score_course, :enade_id, @Enades_List, :id, :year)%>
+  </div>
+  <div class="field">
+    <%= f.label :course_id %><br>
+    <%= collection_select(:score_course, :course_id, @Courses_List, :id, :name)%>
+  </div>
+  <div class="field">
+    <%= f.label :score %><br>
+    <%= f.text_field :score %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
