@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.3.0"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '5.1.2'
+gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
@@ -38,9 +38,11 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+
 group :production do
 #Heroku Dependencies
-  gem 'pg'
+  #gem 'pg'
   gem 'rails_12factor'
 end
 
